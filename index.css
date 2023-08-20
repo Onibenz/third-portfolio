@@ -1,0 +1,231 @@
+@font-face {
+    font-family: Fonts;
+    src: url(fonts/graphik-fonts/graphikbold-webfont.woff2);
+  }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+  
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* *******My style starts Here******** */
+body {
+    height: 90vh;
+    margin-inline: auto;
+    min-width: 90%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 10vh;
+    border-bottom: 2px solid #999;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+header img {
+    width: 128px;
+    height: 32px;
+}
+
+.mobile-nav{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(15px);
+   
+} 
+
+
+nav ul {
+    /* border: 1px solid; */
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0%;
+    padding: 0%;
+}
+   
+
+nav ul li {
+    padding-block: 10px;
+    font-family: Fonts;
+    cursor: pointer;
+    
+}
+
+.fa-x {
+    display: none;
+    position: static;
+    top: 30px;
+    right: 90%;
+}
+
+section {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+section h2 {
+    font-family: Fonts;
+    font-size: 37px;
+    font-weight: 600;
+    line-height: 42.55px;
+    line-break: -0.37px;
+    margin-bottom: 12px;
+}
+
+section p {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    line-height: 28.8px;
+    line-break: normal;
+    margin-bottom: 16px
+}
+
+form input {
+    font-family: 'Inter', sans-serif;
+    Background-color: #edede9;
+    outline-color: #232115;
+    border-radius: 7px;
+    border: 0;
+    height: 40px;
+}
+
+form button {
+    background-color: #d6d6d2;
+    position: relative;
+    right: 35px;
+    border-radius: 10px;
+    border: 0;
+    height: 30px;   
+}
+
+section img {
+    width: 600px;
+}
+
+@media (min-width: 820px) {
+    
+    body {
+        min-width: 500px;
+    }
+
+    .fa-bars, .fa-x {
+        display: none;
+    }
+
+    .mobile-nav{
+        display: block;
+        backdrop-filter: blur(0); 
+    }
+
+    nav ul {
+        flex-direction: row;
+        height: 10vh;
+        width: 98vw;
+        justify-content: end;
+    }
+
+    nav ul li {
+        padding-inline: 10px;
+        font-family: Fonts;
+    }
+
+    section h2 {
+        font-size: 55px;
+        line-height: 63.25px;
+        line-break: -0.53px;
+    }
+    
+    section p {
+        font-size: 20.5px;
+        line-height: 32.8px;
+    }
+
+}
